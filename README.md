@@ -81,21 +81,6 @@ project/
 ├── requirements.txt     # Dependency list
 ```
 
-## How to Run the Code
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/breast-cancer-classification.git
-   cd breast-cancer-classification
-   ```
-2. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Run the Script**:
-   ```bash
-   python script_name.py
-   ```
-
 
 
 ## Acknowledgments
