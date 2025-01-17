@@ -43,14 +43,18 @@ The model is a feedforward neural network with the following architecture:
 - Output Layer: 1 neuron with sigmoid activation for binary classification
 
 ### 5. Training and Validation
-The model is trained using the Adam optimizer and binary crossentropy loss for up to 50 epochs with early stopping to prevent overfitting.
+The model is trained using the Adam optimizer and binary crossentropy loss for up to 11 epochs with early stopping to prevent overfitting. 
+
+> **Note**: The model is configured to train for up to 11 epochs, with early stopping to prevent overfitting. Early stopping halts training if validation loss does not improve for 2 consecutive epochs, ensuring efficient training and resource utilization.
 
 ### 6. Evaluation
 - The model is evaluated using accuracy and loss metrics.
 - A confusion matrix and classification report provide further insights into the model’s performance.
 
 ### 7. Visualization
-Plots of training and validation loss and accuracy over epochs are generated to monitor the training process.
+Plots of training and validation loss and accuracy over epochs are generated to monitor the training process. Below is an example of the accuracy and loss over epochs:
+
+![Accuracy and Loss Over Epochs](./results/accuracy_loss_epochs.png)
 
 ### 8. Model Saving
 - The trained model is saved in HDF5 format (`breast_cancer_classification_model.h5`).
@@ -59,31 +63,33 @@ Plots of training and validation loss and accuracy over epochs are generated to 
 ## Results
 - **Test Accuracy**: 97.37%
 - **Confusion Matrix**:
-  | Actual \ Predicted | Benign (B) | Malignant (M) |
-  |-------------------|------------|---------------|
-  | **Benign (B)**    | 67         | 0             |
-  | **Malignant (M)** | 3          | 44            |
+  ![Confusion Matrix](./results/confusion_matrix.png)
 
-- **Precision, Recall, F1-Score**:
+- **Classification Report**:
+  ```
+              precision    recall  f1-score   support
+
+           B       0.98      0.96      0.97        67
+           M       0.94      0.98      0.96        47
+
+    accuracy                           0.96       114
+   macro avg       0.96      0.97      0.96       114
+weighted avg       0.97      0.96      0.97       114
+  ```
+
+- **Precision, Recall, F1-Score (Summary)**:
   | Class       | Precision | Recall | F1-Score |
   |-------------|-----------|--------|----------|
   | **Benign**  | 0.96      | 1.00   | 0.98     |
   | **Malignant** | 1.00    | 0.94   | 0.97     |
 
-## Repository Structure
-```
-project/
-├── data/                # If including sample datasets
-├── models/              # Saved models
-├── scripts/             # Python code files
-├── results/             # Output plots and results
-├── README.md            # Project overview
-├── requirements.txt     # Dependency list
-```
 
 
+## License
+MIT License
 
 ## Acknowledgments
 - The dataset creators: William Wolberg, Olvi Mangasarian, Nick Street, and W. Street.
 - UCI Machine Learning Repository for hosting the dataset.
+
 
