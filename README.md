@@ -38,9 +38,17 @@ The dataset is split into training (80%) and testing (20%) subsets using `train_
 ### 4. Neural Network Model
 The model is a feedforward neural network with the following architecture:
 - Input Layer: 16 neurons
-- Hidden Layer: 32 neurons with ReLU activation and L2 regularization
+- Hidden Layer: 32 neurons with ReLU activation
 - Dropout Layer: Dropout rate of 0.3 to prevent overfitting
 - Output Layer: 1 neuron with sigmoid activation for binary classification
+
+#### Why Use a Feedforward Neural Network and Not a Convolutional Neural Network (CNN)?
+
+The dataset consists of tabular data with numerical features representing tumor measurements, rather than image data. CNNs are primarily designed to work with spatial or image data where patterns like edges, textures, or shapes are crucial.
+
+A feedforward neural network is better suited for tabular data as it processes each feature independently and can learn relationships between features effectively without requiring spatial awareness.
+
+Using a CNN here would be computationally expensive and unnecessary for the given tabular data.
 
 ### 5. Training and Validation
 The model is trained using the Adam optimizer and binary crossentropy loss for up to 11 epochs with early stopping to prevent overfitting. 
