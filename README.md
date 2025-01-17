@@ -52,9 +52,7 @@ The model is trained using the Adam optimizer and binary crossentropy loss for u
 - A confusion matrix and classification report provide further insights into the model’s performance.
 
 ### 7. Visualization
-Plots of training and validation loss and accuracy over epochs are generated to monitor the training process. Below is an example of the accuracy and loss over epochs:
-
-![Accuracy and Loss Over Epochs](./results/accuracy_loss_epochs.png)
+Plots of training and validation loss and accuracy over epochs are generated to monitor the training process. 
 
 ### 8. Model Saving
 - The trained model is saved in HDF5 format (`breast_cancer_classification_model.h5`).
@@ -62,8 +60,6 @@ Plots of training and validation loss and accuracy over epochs are generated to 
 
 ## Results
 - **Test Accuracy**: 97.37%
-- **Confusion Matrix**:
-  ![Confusion Matrix](./results/confusion_matrix.png)
 
 - **Classification Report**:
   ```
