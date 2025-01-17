@@ -96,8 +96,7 @@ project/
    python script_name.py
    ```
 
-## License
-Include a license (e.g., MIT License) to specify terms of use.
+
 
 ## Acknowledgments
 - The dataset creators: William Wolberg, Olvi Mangasarian, Nick Street, and W. Street.
